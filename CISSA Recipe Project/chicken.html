@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookHax</title>
+    <link rel="stylesheet" href="dish.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+</head>
+<body>
+    <nav class="index-nav recipe-nav">
+        <div class="nav-logo">
+            <img src="assets/cookhax image.jpg" alt="recipe storage">
+        </div>
+
+        <!-- reload -->
+
+        <div class="reload-button">
+            <a href="index.html" class="reload-link"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+
+        <!-- time display -->
+
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+
+        <!-- navigation categories -->
+
+        <ul class="nav-list">
+            <li class="nav-element nav-link create" id="create" onclick="onNavItemClick('create')" class="nav-link create-link">CREATE</li>
+            <li class="nav-element nav-link food" id="food" onclick="onNavItemClick('food')" class="nav-link food-link">FOOD</li>
+            <li class="nav-element nav-link drinks" id="drinks" onclick="onNavItemClick('drinks')" class="nav-link drinks-link">DRINKS</li>
+            <li class="nav-element nav-link login" id="login"> <a class="nav-element nav-link login-link" href="login.html">LOGIN</a></li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>
+
+    <main class="dish-main">
+        <img class="dish-img chicken" src="assets/chicken.webp" alt="Chicken">
+        <h1 class="dish-title">Kung-Pao Chicken</h1>
+        <div class="dish-ing">
+            <ul class="ing-list chicken-ing">
+                <h2 class="ing-title">Ingredients (Serves 2)</h2>
+                <li class="ing-element">1 pound skinless, boneless chicken <br> breast halves - cut into chunks</li>
+                <li class="ing-element">2 tbsp cornstarch, <br> dissolved in 2 tbsp water</li>
+                <li class="ing-element">2 tbsp white wine, divided</li>
+                <li class="ing-element">2 tbsp soy sauce, divided</li>
+                <li class="ing-element">2 tbsp sesame oil, divided</li>
+                <li class="ing-element">1 ounce hot chili paste</li>
+                <li class="ing-element">2 tsp brown sugar</li>
+                <li class="ing-element">1 tsp distilled white vinegar</li>
+                <li class="ing-element">1 can water chestnuts (8 ounce) </li>
+                <li class="ing-element">4 ounces chopped peanuts</li>
+                <li class="ing-element">4 green onions, chopped></li>
+                <li class="ing-element">1 tablespoon chopped garlic</li> 
+            </ul>  
+        </div>
+        <div class="dish-recipe">
+            <h3 class="recipe-title">Recipe</h3>
+            1. Mix cornflour and soy sauce in a small bowl until cornflour is dissolved. Then mix in remaining Sauce ingredients EXCEPT water.
+            Pour 1.5 tbsp Sauce over chicken. Toss to coat, set aside for 10 - 20 minutes.
+            Add water into remaining Sauce. <br><br>
+            2.	Heat oil in wok over high heat. Add garlic, ginger and chillies. Cook for 30 seconds or until fragrant.
+            Add chicken, cook until it turns white, then add the white part of the green onions. Cook until chicken is cooked through - about 2 minutes.<br><br>
+            3.	Add Sauce and Sichuan pepper. Bring to simmer, mixing constantly, until almost all the sauce reduces to a thick syrup.
+            Just before the end, mix through peanuts and green part of the green onions. Also check spiciness - add more Sichuan pepper if you can handle the heat!<br><br>
+            4.	Serve immediately with rice - or for a low carb, low cal option, try Cauliflower Rice! <br><br>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

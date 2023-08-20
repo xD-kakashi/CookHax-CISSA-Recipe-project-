@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookHax</title>
+    <link rel="stylesheet" href="dish.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+</head>
+<body>
+    <nav class="index-nav recipe-nav">
+        <div class="nav-logo">
+            <img src="assets/cookhax image.jpg" alt="recipe storage">
+        </div>
+
+        <!-- reload -->
+
+        <div class="reload-button">
+            <a href="index.html" class="reload-link"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+
+        <!-- time display -->
+
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+
+        <!-- navigation categories -->
+
+        <ul class="nav-list">
+            <li class="nav-element nav-link create" id="create" onclick="onNavItemClick('create')" class="nav-link create-link">CREATE</li>
+            <li class="nav-element nav-link food" id="food" onclick="onNavItemClick('food')" class="nav-link food-link">FOOD</li>
+            <li class="nav-element nav-link drinks" id="drinks" onclick="onNavItemClick('drinks')" class="nav-link drinks-link">DRINKS</li>
+            <li class="nav-element nav-link login" id="login"> <a class="nav-element nav-link login-link" href="login.html">LOGIN</a></li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>
+
+    <main class="dish-main">
+        <img class="dish-img" src="assets/pasta.jpg" alt="Pasta">
+        <h1 class="dish-title">Four Cheese Pasta</h1>
+        <div class="dish-ing">
+            <ul class="ing-list">
+                <h2 class="ing-title">Ingredients (Serves 2)</h2>
+                <li class="ing-element">250g Penne Pasta</li>
+                <li class="ing-element">2 cups heavy whipping cream</li>
+                <li class="ing-element">½ cup butter</li>
+                <li class="ing-element">½ cup grated Parmesan cheese</li>
+                <li class="ing-element">½ cup shredded mozzarella cheese</li>
+                <li class="ing-element">½ cup shredded provolone cheese</li>
+                <li class="ing-element">½ cup grated Romano cheese</li>
+            </ul>
+        </div>
+        <div class="dish-recipe">
+            <h3 class="recipe-title">Recipe</h3>
+            1. Bring a large pan of water witha generous pinch of salt to the <br><br>
+            2.	Boil. Add the pasta and cook for 2 minutes less than the packet says. <br><br>
+            3.	Meanwhile, put the cream and milk in a large saucepan over a medium heat. Stir in the cream cheese and other cheeses until they have melted into a thick sauce. Season this well with freshly ground black pepper and a little salt. <br><br>
+            4.	Drain the pasta well but keep back 100ml of its cooking water. Mix the drained pasta into the creamy sauce, adding enough pasta water to keep the mixture moist, stirring well to combine. Keep the pan over a gentle heat. <br><br>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

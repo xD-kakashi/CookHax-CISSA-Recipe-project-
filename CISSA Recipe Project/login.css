@@ -1,0 +1,160 @@
+.login-page {
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--dark-mode-color);
+    padding-bottom: 50px;
+}
+
+.login-box {
+    display: block;
+    box-shadow: 7px;
+    box-sizing: border-box;
+    width: fit-content;
+    border-color: var(--light-mode-color);
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    color: black;
+    background-color: white;
+}
+
+.login-card {
+    padding: 40px;
+    vertical-align: middle;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.login-header {
+    font-weight: 400;
+}
+
+.login-welcome {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.login-request {
+    font-size: medium;
+    font-weight: 500;
+    text-align: left;
+}
+
+.login-details {
+    color: black;
+    line-height: 20px;
+}
+
+.login-credentials {
+    font-weight: 400;
+    font-size: large;
+    margin-top: 20px;
+    line-height: 50px;
+}
+
+.create-account-link {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    opacity: 80%;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.8s, font-size 0.8s;
+}
+
+.create-account-link:hover {
+    color: #e195c0;
+    font-size: 15px;
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+}
+
+.login-button {
+    margin: auto;
+    width: 120px;
+    height: 30px;
+    border-radius: 100px;
+    border-width: 2px;
+    border-color: #e195c0;
+    color: white;
+    border-style: solid;
+    background-color: #e195c0;
+    transition: transform 0.8s, background-color 0.8s, color 0.8s, border-color 0.8s;
+}
+
+.login-button-div {
+    text-align: center;
+}
+
+.login-button:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    color: #e195c0;
+    background-color: white;
+    border-color: #e195c0;
+}
+
+.login-username,.login-password {
+    text-align: left;
+}
+
+.username-input {
+    display: inline-block;
+    border-radius: 0px;
+    box-sizing: content-box;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px black;
+    height: 20px;
+    width: 150px;
+    border-style: solid;
+}
+
+.username-input:focus {
+    outline: none !important;
+}
+
+.password-input {
+    display: inline-block;
+    border-radius: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px black;
+    height: 20px;
+    width: 150px;
+    border-style: solid;
+}
+
+.password-input:focus {
+    outline: none !important;
+}
+
+.google-login {
+    padding: 5px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    opacity: 90%;
+    transition: all 0.8s;
+    margin-bottom: 20px;
+}
+
+.google-login:hover {
+    transform: scale(1.06);
+    opacity: 100%;
+}
+
+.login-choice {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 10px;
+    color: var(--light-mode-color);
+}

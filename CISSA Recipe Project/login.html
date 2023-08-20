@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="login-home" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body class="login-body login-page nav">
+    <nav class="index-nav recipe-nav">
+        <div class="nav-logo">
+            <img src="assets/cookhax image.jpg" alt="recipe storage">
+        </div>
+
+        <!-- reload -->
+
+        <div class="reload-button">
+            <a href="index.html" class="reload-link"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+
+        <!-- time display -->
+
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+
+        <!-- navigation categories -->
+
+        <ul class="nav-list">
+            <li class="nav-element nav-link create" id="create" class="nav-link create-link">CREATE</li>
+            <li class="nav-element nav-link food" id="food" onclick="onNavItemClick('food')" class="nav-link food-link">FOOD</li>
+            <li class="nav-element nav-link drinks" id="drinks" onclick="onNavItemClick('drinks')" class="nav-link drinks-link">DRINKS</li>
+            <li class="nav-element nav-link login" id="login"> <a class="nav-element nav-link login-link" href="login.html">LOGIN</a></li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>
+    <div class="login-card login-box login-details">
+        <div class="login-header">
+            <h1 class="login-welcome">Login</h1>
+            <p class="login-request">Takes only 30 seconds</p>
+        </div>
+        <hr>
+        <div class="login-credentials">
+            <label for="Username" class="login-username">
+                Username:
+                <input class="username-input" type="text" placeholder="Username/Email Id">
+            </label>
+            <br>
+            <label for="password" class="login-password">
+                Password:
+                <input class="password-input" type="password" placeholder="Atleast 8 characters">
+            </label>
+            <br>
+            <div class="login-button-div"><button class="login-button">Sign in</button></div>
+            <footer class="login-footer">Feeling left out? <a href="" class="create-account-link">Join us</a></footer>
+        </div>
+    </div>
+    <p class="login-choice">OR</p>
+    <div id="g_id_onload"
+    data-client_id="YOUR_GOOGLE_CLIENT_ID"
+    data-login_uri="https://your.domain/your_login_endpoint"
+    data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin google-login"
+    data-type="standard"
+    data-size="large"
+    data-theme="outline"
+    data-text="sign_in_with"
+    data-shape="square"
+    data-logo_alignment="left"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

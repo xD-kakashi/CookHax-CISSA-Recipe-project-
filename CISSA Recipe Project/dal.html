@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookHax</title>
+    <link rel="stylesheet" href="dish.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+</head>
+<body>
+    <nav class="index-nav recipe-nav">
+        <div class="nav-logo">
+            <img src="assets/cookhax image.jpg" alt="recipe storage">
+        </div>
+
+        <!-- reload -->
+
+        <div class="reload-button">
+            <a href="index.html" class="reload-link"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+
+        <!-- time display -->
+
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+
+        <!-- navigation categories -->
+
+        <ul class="nav-list">
+            <li class="nav-element nav-link create" id="create" onclick="onNavItemClick('create')" class="nav-link create-link">CREATE</li>
+            <li class="nav-element nav-link food" id="food" onclick="onNavItemClick('food')" class="nav-link food-link">FOOD</li>
+            <li class="nav-element nav-link drinks" id="drinks" onclick="onNavItemClick('drinks')" class="nav-link drinks-link">DRINKS</li>
+            <li class="nav-element nav-link login" id="login"> <a class="nav-element nav-link login-link" href="login.html">LOGIN</a></li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>
+
+    <main class="dish-main">
+        <img class="dish-img" src="assets/dal.jpg" alt="Dal">
+        <h1 class="dish-title">Dal Bukhara</h1>
+        <div class="dish-ing">
+            <ul class="ing-list dal-ing">
+                <h2 class="ing-title">Ingredients (Serves 2)</h2>
+                <li class="ing-element">1 cup black lentils</li>
+                <li class="ing-element">¼ cup kidney beans</li>
+                <li class="ing-element">4 cups of water</li>
+                <li class="ing-element">3 tbsp ghee or oil</li>
+                <li class="ing-element">1 large onion, finely chopped</li>
+                <li class="ing-element">2 tbsp ginger-garlic paste</li>
+                <li class="ing-element">2 large tomatoes, pureed</li>
+                <li class="ing-element">½ tsp turmeric powder</li>
+                <li class="ing-element">1 tsp red chili powder (adjust to taste)</li>
+                <li class="ing-element">½ cup fresh or heavy cream</li>
+                <li class="ing-element">Chopped cilantro (coriander leaves) for garnish</li>
+            </ul>
+        </div>
+        <div class="dish-recipe">
+            <h3 class="recipe-title">Recipe</h3>
+            1. Wash the black lentils and kidney beans thoroughly under running water.
+            Soak them in 4 cups of water overnight or for at least 6-8 hours. This will help soften the lentils and reduce cooking time.<br><br>
+            2. Drain and rinse the soaked lentils and kidney beans.
+            In a large pot, add the soaked lentils, kidney beans, and 4 cups of water.
+            Bring to a boil, then reduce the heat to low, cover, and let it simmer until the lentils and beans are tender. This might take about 30-40 minutes. You can also use a pressure cooker to expedite the process.<br><br>
+            3. In a separate pan, heat 3 tablespoons of ghee or oil over medium heat.
+            Add the finely chopped onions and sauté until they turn golden brown.
+            <br><br>
+            4. Add ginger-garlic paste and sauté for a couple of minutes until the raw smell disappears.
+            Add the tomato puree and cook until the mixture thickens and the ghee starts to separate from the sides.
+            <br><br>
+            5.Add turmeric powder, red chili powder, cumin powder, and garam masala. Cook for a few minutes, allowing the spices to blend well.
+            <br><br>
+            6. Once the lentils and beans are cooked, add them to the tomato-spice mixture.Mix well, add salt to taste, and allow the dal to simmer on low heat for about 20-30 minutes. This helps the flavors meld together.<br><br>
+            7. Pour in the fresh cream or heavy cream and mix well. Let it cook for another 10 minutes, <br> stirring occasionally. In a small pan, heat 2 tablespoons of ghee for tempering. Add cumin seeds <br> and let them splutter. Add chopped garlic and dried red chili (if using) and sauté until <br> the garlic turns golden.<br><br>
+            8. Pour the tempering over the prepared dal makhani.<br><br>
+            9. Garnish with chopped cilantro (coriander leaves).
+            Serve hot with steamed rice, naan, or roti.
+            <br><br>
+
+
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

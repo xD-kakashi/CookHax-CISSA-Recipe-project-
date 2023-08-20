@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookHax</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mode-switch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0ba230c8bd.js" crossorigin="anonymous"></script>
+    <script src="light-dark.js"></script>
+</head>
+<body class="recipe-body">
+    <nav class="index-nav recipe-nav">
+        <div class="nav-logo">
+            <img src="assets/cookhax image.jpg" alt="recipe storage">
+        </div>
+
+        <!-- reload -->
+
+        <div class="reload-button">
+            <a href="index.html" class="reload-link"><i class="fa-solid fa-rotate-right"></i></a>
+        </div>
+
+        <!-- time display -->
+
+        <div class="time-container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+        </div>
+
+        <!-- navigation categories -->
+
+        <ul class="nav-list">
+            <li class="nav-element nav-link create" id="create" onclick="onNavItemClick('create')" class="nav-link create-link">CREATE</li>
+            <li class="nav-element nav-link food" id="food" onclick="onNavItemClick('food')" class="nav-link food-link">FOOD</li>
+            <li class="nav-element nav-link drinks" id="drinks" onclick="onNavItemClick('drinks')" class="nav-link drinks-link">DRINKS</li>
+            <li class="nav-element nav-link login" id="login"> <a class="nav-element nav-link login-link" href="login.html">LOGIN</a></li>
+            <div class="nav-element search search-bar">
+                <input type="text" class="search-input search-box" id="search-text" placeholder="Search">
+                <button class="search-button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </ul>
+        <div onclick="switch_mode()" class="mode-switcher"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+    </nav>  
+
+    <main class="recipe-content">
+        <div class="card-container" id="card-container">
+            <a href="pasta.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/pasta.jpg" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Four Cheese Pasta</h3>
+                    <h6 class="recipe-source" id="recipe-source">Delicious | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">This extra cheesy four-cheese sauce is made with Parmesan, mozzarella, provolone, and Romano. It's great on gnocchi, fettuccini, or any type of pasta. Garlic bread would be a tasty combo.</div>
+                </div>
+            </div></a>
+            <a href="iced.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/coffee.jpg" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Iced Frappé</h3>
+                    <h6 class="recipe-source" id="recipe-source">The kitchn | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">A frappe is a thicker, smoother chilled coffee drink that has a slushy texture, but is incredibly creamy and sumptuous, almost like a coffee smoothie!</div>
+                </div>
+            </div></a>
+            <a href="taco.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/taco.jpg" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Mexican Tacos</h3>
+                    <h6 class="recipe-source" id="recipe-source">Damn Delicious | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">It's a quick recipe using a simple marinade for your skirt steak. Top off your tacos with diced onion, cilantro and fresh lime juice!</div>
+                </div>
+            </div></a>
+            <a href="chicken.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/chicken.webp" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Kung-Pao Chicken</h3>
+                    <h6 class="recipe-source" id="recipe-source">Recipetineats | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">Kung Pao Chicken is a Chinese takeout favourite, mouthwateringly good and highly addictive. Savour the strong flavoured sweet-sour sauce with the signature tingle of numbing heat!</div>
+                </div>
+            </div></a>
+            <a href="dal.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/dal.jpg" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Dal Bukhara</h3>
+                    <h6 class="recipe-source" id="recipe-source">ChatGPT | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">Dal Makhani is a delicious and flavorful dish in Indian cuisine. Its combination of creamy lentils, rich tomato-based gravy, and aromatic spices creates a highly appealing taste profile.</div>
+                </div>
+            </div></a>
+            <a href="mojito.html" class="card"><div class="card">
+                <div class="card-header">
+                    <img src="assets/mojito.webp" alt="recipe image" id="recipe-img" class="recipe-img">
+                </div>
+                <div class="card-content">
+                    <h3 class= "recipe-title" id="recipe-title">Virgin Mojito</h3>
+                    <h6 class="recipe-source" id="recipe-source">Sustainable Cooks | 20/08/2023</h6>
+                    <div class="recipe-desc" id="recipe-desc">A refreshing mix of lime and mint, this Virgin Mojito Recipe will be your new favorite drink! This non-alcoholic mojito recipe will be a hit with kids and adults alike.</div>
+                </div>
+            </div></a>
+        </div>
+    </main>
+
+    <!-- recipe card generator -->
+    
+    <!-- <template id="recipe-card-template">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="recipe image" id="recipe-img" class="recipe-img">
+            </div>
+            <div class="card-content">
+                <h3 class= "recipe-title" id="recipe-title">recipe Title</h3>
+                <h6 class="recipe-source" id="recipe-source">Author 26/08/2023</h6>
+                <div class="recipe-desc" id="recipe-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti maiores nam excepturi ut ipsum id libero optio fugit ducimus!</div>
+            </div>
+        </div>
+    </template> -->
+
+    <!-- loader -->
+
+    <!-- <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut();
+        });
+    </script> -->
+
+    <script src="index.js"></script>
+</html>

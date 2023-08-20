@@ -1,0 +1,44 @@
+:root{
+    --light-mode-color: rgb(225, 149, 192);
+    --dark-mode-color: white;
+    --switch-button-light: rgb(225,149,192);
+    --switch-button-dark: white;
+    --light-mode-shadow: 0 0 4px;
+    --dark-mode-shadow: 0 0 12px;
+    --light-mode-shadow-hover: 0 0 10px;
+    --dark-mode-shadow-hover: 5px 5px 20px;
+    --light-nav:white;
+    --dark-nav:#E195C0;
+}
+
+.dark-mode{
+    background-color: #E195C0;
+    /* .recipe-nav {
+        color: var(--dark-mode-color);
+    } */
+    /* .mode-switcher{
+        color: var(--switch-button-dark);
+    } */
+    .dish-main{
+        color: white;
+    }
+    .login-choice{
+        color: var(--dark-mode-color);
+    }
+    .search-box:hover{
+        border-color: var(--dark-mode-color);
+    }
+    .search-box:focus{
+        outline: none;
+        border-color: var(--dark-mode-color);
+    }
+    .card{
+        box-shadow: var(--dark-mode-shadow) var(--dark-mode-color);
+    }
+    .card:hover{
+        box-shadow: var(--dark-mode-shadow-hover) var(--dark-mode-color);
+    }
+    /* .recipe-nav{
+        background-color: var(--dark-nav);
+    } */
+}
